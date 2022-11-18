@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import NavItem from './NavItem'
+import NavItem from './Navitem'
 import styles from '../styles/Navbar.module.css'
 
 const MENU_LIST = [
