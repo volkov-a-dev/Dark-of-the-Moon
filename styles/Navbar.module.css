@@ -1,0 +1,24 @@
+.header {
+  width: 100%;
+  background-color: azure;
+}
+
+.navbar {
+  height: 40px;
+  width: 100%;
+  display: flex;
+  color: black;
+}
+
+.nav__items__container {
+  display: flex;
+  align-items: center;
+}
+
+.nav__item {
+  padding: 16px;
+}
+
+.active {
+  color: red;
+}
