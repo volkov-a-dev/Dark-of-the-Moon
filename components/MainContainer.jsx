@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Navbar from './NavBar'
+import Navbar from './Navbar'
 
 const MainContainer = ({ children, keywords = '' }) => {
   return (
