@@ -1,13 +1,28 @@
-.container {
-  padding: 0 2rem;
+.main_container {
+  max-width: 100vw;
+  overflow-x: hidden;
+  background-color: #e6edfa;
 }
 
-.home {
-  min-height: 100vh;
-  padding: 4rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.map_container {
+  width: 100%;
+}
+
+.map_paper {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.map {
+  width: 100%;
+  height: 460px;
+  border-radius: 12px;
+}
+
+.comment_card {
+  border-radius: 12px;
+}
+
+.rating_card {
+  border-radius: 12px;
 }
