@@ -12,7 +12,6 @@ import {
   Popup,
 } from 'react-leaflet'
 import { Paper } from '@mui/material'
-
 interface ChangeViewProps {
   coords: LatLngExpression
 }
