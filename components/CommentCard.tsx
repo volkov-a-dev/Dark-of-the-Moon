@@ -1,10 +1,10 @@
-import * as React from 'react'
-import styles from '../styles/Home.module.css'
-import Card from '@mui/material/Card'
-import CardActions from '@mui/material/CardActions'
-import CardContent from '@mui/material/CardContent'
-import Button from '@mui/material/Button'
-import Typography from '@mui/material/Typography'
+import * as React from "react";
+import styles from "../styles/Home.module.css";
+import Card from "@mui/material/Card";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
 
 const CommentCard: React.FC = () => {
   return (
@@ -18,7 +18,7 @@ const CommentCard: React.FC = () => {
         <Button size="small">Learn More</Button>
       </CardActions>
     </Card>
-  )
-}
+  );
+};
 
-export default CommentCard
+export default CommentCard;

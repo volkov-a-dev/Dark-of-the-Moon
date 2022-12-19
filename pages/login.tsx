@@ -1,5 +1,5 @@
-import * as React from 'react'
-import Router from 'next/router'
+import * as React from "react";
+import Router from "next/router";
 import {
   Avatar,
   Button,
@@ -12,12 +12,12 @@ import {
   Box,
   Typography,
   Container,
-} from '@mui/material'
-import LockOutlinedIcon from '@mui/icons-material/LockOutlined'
-import { createTheme, ThemeProvider } from '@mui/material/styles'
-import setAuthToken from '../auth/setAuthToken'
-import jwt_decode from 'jwt-decode'
-import axios from 'axios'
+} from "@mui/material";
+import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+import setAuthToken from "../auth/setAuthToken";
+import jwt_decode from "jwt-decode";
+import axios from "axios";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 function Copyright(props: any) {
@@ -28,41 +28,41 @@ function Copyright(props: any) {
       align="center"
       {...props}
     >
-      {'Copyright © '}
+      {"Copyright © "}
       <Link color="inherit" href="#">
         Your Website
-      </Link>{' '}
+      </Link>{" "}
       {new Date().getFullYear()}
-      {'.'}
+      {"."}
     </Typography>
-  )
+  );
 }
 
-const theme = createTheme()
+const theme = createTheme();
 
 export default function LogIn() {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault()
-    const data = new FormData(event.currentTarget)
+    event.preventDefault();
+    const data = new FormData(event.currentTarget);
     const userData = {
-      email: data.get('email'),
-      password: data.get('password'),
-    }
+      email: data.get("email"),
+      password: data.get("password"),
+    };
 
     axios
-      .post('http://localhost:5000/api/users/login', userData)
+      .post("http://localhost:5000/api/users/login", userData)
       .then((res) => {
-        const { token } = res.data
-        localStorage.setItem('jwtToken', token)
-        setAuthToken(token)
-        const decoded = jwt_decode(token)
-        console.log(decoded)
-        Router.push({ pathname: '/' })
+        const { token } = res.data;
+        localStorage.setItem("jwtToken", token);
+        setAuthToken(token);
+        const decoded = jwt_decode(token);
+        console.log(decoded);
+        Router.push({ pathname: "/" });
       })
       .catch((err) => {
-        console.log(err.response.data)
-      })
-  }
+        console.log(err.response.data);
+      });
+  };
 
   return (
     <ThemeProvider theme={theme}>
@@ -71,12 +71,12 @@ export default function LogIn() {
         <Box
           sx={{
             marginTop: 8,
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
           }}
         >
-          <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
+          <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}>
             <LockOutlinedIcon />
           </Avatar>
           <Typography component="h1" variant="h5">
@@ -137,5 +137,5 @@ export default function LogIn() {
         <Copyright sx={{ mt: 8, mb: 4 }} />
       </Container>
     </ThemeProvider>
-  )
+  );
 }

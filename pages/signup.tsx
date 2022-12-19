@@ -1,5 +1,5 @@
-import * as React from 'react'
-import Router from 'next/router'
+import * as React from "react";
+import Router from "next/router";
 import {
   Avatar,
   Button,
@@ -12,10 +12,10 @@ import {
   Box,
   Typography,
   Container,
-} from '@mui/material'
-import LockOutlinedIcon from '@mui/icons-material/LockOutlined'
-import { createTheme, ThemeProvider } from '@mui/material/styles'
-import axios from 'axios'
+} from "@mui/material";
+import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+import axios from "axios";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 function Copyright(props: any) {
@@ -26,36 +26,36 @@ function Copyright(props: any) {
       align="center"
       {...props}
     >
-      {'Copyright © '}
+      {"Copyright © "}
       <Link color="inherit" href="#">
         Your Website
-      </Link>{' '}
+      </Link>{" "}
       {new Date().getFullYear()}
-      {'.'}
+      {"."}
     </Typography>
-  )
+  );
 }
 
-const theme = createTheme()
+const theme = createTheme();
 
 export default function SignUp() {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault()
-    const data = new FormData(event.currentTarget)
+    event.preventDefault();
+    const data = new FormData(event.currentTarget);
     const userData = {
-      name: data.get('name'),
-      email: data.get('email'),
-      password: data.get('password'),
-      password_confirm: data.get('password_confirm'),
-    }
+      name: data.get("name"),
+      email: data.get("email"),
+      password: data.get("password"),
+      password_confirm: data.get("password_confirm"),
+    };
 
     axios
-      .post('http://localhost:5000/api/users/register', userData)
-      .then(() => Router.push({ pathname: '/login' }))
+      .post("http://localhost:5000/api/users/register", userData)
+      .then(() => Router.push({ pathname: "/login" }))
       .catch((err) => {
-        console.log(err.response.data)
-      })
-  }
+        console.log(err.response.data);
+      });
+  };
 
   return (
     <ThemeProvider theme={theme}>
@@ -64,12 +64,12 @@ export default function SignUp() {
         <Box
           sx={{
             marginTop: 8,
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
           }}
         >
-          <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
+          <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}>
             <LockOutlinedIcon />
           </Avatar>
           <Typography component="h1" variant="h5">
@@ -154,5 +154,5 @@ export default function SignUp() {
         <Copyright sx={{ mt: 5 }} />
       </Container>
     </ThemeProvider>
-  )
+  );
 }

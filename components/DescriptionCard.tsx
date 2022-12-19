@@ -1,14 +1,14 @@
-import * as React from 'react'
-import Card from '@mui/material/Card'
-import CardActions from '@mui/material/CardActions'
-import CardContent from '@mui/material/CardContent'
-import CardMedia from '@mui/material/CardMedia'
-import Button from '@mui/material/Button'
-import Typography from '@mui/material/Typography'
+import * as React from "react";
+import Card from "@mui/material/Card";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
 
 const DescriptionCard: React.FC = () => {
   return (
-    <Card sx={{ width: '100%', borderRadius: '12px' }}>
+    <Card sx={{ width: "100%", borderRadius: "12px" }}>
       <CardMedia
         component="img"
         height="200"
@@ -28,7 +28,7 @@ const DescriptionCard: React.FC = () => {
         <Button size="small">Learn More</Button>
       </CardActions>
     </Card>
-  )
-}
+  );
+};
 
-export default DescriptionCard
+export default DescriptionCard;
