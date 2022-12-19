@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "server": "cd backend && nodemon app",
+    "lint": "yarn eslint .",
+    "lint:fix": "yarn eslint --fix .",
+    "format": "yarn prettier --write ."
   },
   "dependencies": {
     "@emotion/react": "^11.10.5",
@@ -16,6 +19,8 @@
     "@types/node": "18.11.9",
     "@types/react": "18.0.24",
     "@types/react-dom": "18.0.8",
+    "axios": "^1.2.1",
+    "jwt-decode": "^3.1.2",
     "leaflet": "^1.9.3",
     "next": "12",
     "react": "18.2.0",
