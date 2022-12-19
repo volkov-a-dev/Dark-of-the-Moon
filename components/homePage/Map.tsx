@@ -1,5 +1,5 @@
 import { SetStateAction, useState, Dispatch } from "react";
-import styles from "./HomePage.module.scss";
+import styles from "./HomePage.module.css";
 import "leaflet/dist/leaflet.css";
 import markerIcon from "leaflet/dist/images/marker-icon.png";
 import { LatLngExpression, LatLngTuple, LatLngLiteral, Icon } from "leaflet";
