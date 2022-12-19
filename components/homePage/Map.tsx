@@ -1,5 +1,5 @@
 import { SetStateAction, useState, Dispatch } from "react";
-import styles from "../styles/Home.module.css";
+import styles from "./HomePage.module.scss";
 import "leaflet/dist/leaflet.css";
 import markerIcon from "leaflet/dist/images/marker-icon.png";
 import { LatLngExpression, LatLngTuple, LatLngLiteral, Icon } from "leaflet";
@@ -12,6 +12,7 @@ import {
   Popup,
 } from "react-leaflet";
 import { Paper } from "@mui/material";
+
 interface ChangeViewProps {
   coords: LatLngExpression;
 }

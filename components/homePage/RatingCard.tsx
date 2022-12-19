@@ -1,11 +1,8 @@
 import * as React from "react";
-import styles from "../styles/Home.module.css";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import Rating from "@mui/material/Rating";
-import Typography from "@mui/material/Typography";
+import styles from "./HomePage.module.scss";
+import { Card, CardContent, Typography, Rating } from "@mui/material";
 
-const RartingCard: React.FC = () => {
+const RatingCard: React.FC = () => {
   const [value, setValue] = React.useState<number | null>(4);
 
   const handleRaitingChange = (event: React.SyntheticEvent<Element, Event>) => {
@@ -28,4 +25,4 @@ const RartingCard: React.FC = () => {
   );
 };
 
-export default RartingCard;
+export default RatingCard;

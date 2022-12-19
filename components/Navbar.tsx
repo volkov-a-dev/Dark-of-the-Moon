@@ -1,4 +1,5 @@
 import * as React from "react";
+import Link from "next/link";
 import {
   AppBar,
   Box,
@@ -12,14 +13,13 @@ import {
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import AdbIcon from "@mui/icons-material/Adb";
-import Link from "next/link";
 
 const pages = [
   { text: "Home", href: "/" },
   { text: "Profile", href: "/profile" },
 ];
 
-function ResponsiveAppBar() {
+const ResponsiveAppBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
     null,
   );
@@ -125,5 +125,5 @@ function ResponsiveAppBar() {
       </Container>
     </AppBar>
   );
-}
+};
 export default ResponsiveAppBar;
